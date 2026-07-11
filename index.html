@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Countdown</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          referrerpolicy="no-referrer">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript -->
+    <script defer src="js/index.js"></script>
+    <script defer src="js/Canvas.js"></script>
+</head>
+
+<body>
+
+    <!-- Background Canvas -->
+    <div class="container-canvas">
+        <canvas></canvas>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container-content">
+
+        <!-- Settings Button -->
+        <button class="setting-icon" aria-label="Open Birthday Settings">
+            <i class="fas fa-cog"></i>
+        </button>
+
+        <!-- Countdown Section -->
+        <section class="content">
+
+            <!-- Birthday Message -->
+            <div class="happy__content">
+                <h1>🎉 HAPPY BIRTHDAY!! 🎉</h1>
+            </div>
+
+            <!-- Countdown -->
+            <div class="countdown__content">
+
+                <header class="headline">
+                    <h1>COUNTDOWN TO BIRTHDAY</h1>
+                </header>
+
+                <div class="subline">
+                    <h2>From this day until your special day</h2>
+                </div>
+
+                <ul class="countdown-list">
+                    <li>
+                        <span class="days">0</span>
+                        <small>Days</small>
+                    </li>
+
+                    <li>
+                        <span class="hours">0</span>
+                        <small>Hours</small>
+                    </li>
+
+                    <li>
+                        <span class="minutes">0</span>
+                        <small>Minutes</small>
+                    </li>
+
+                    <li>
+                        <span class="seconds">0</span>
+                        <small>Seconds</small>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- Modal -->
+        <section class="content-modalbox">
+
+            <h2 class="headline__modalbox">
+                Enter Your Birthday
+            </h2>
+
+            <div class="input-container__modalbox">
+                <input
+                    type="text"
+                    class="birthday__input"
+                    placeholder="Example: 13 July 2003"
+                    autocomplete="off">
+
+                <button class="button submit-btn__input--style">
+                    Submit
+                </button>
+            </div>
+
+            <div class="alert-paragraph__modalbox">
+                <strong>Note:</strong>
+                Enter your birthday in the format:
+                <br>
+                <b>Date Month Year</b>
+                <br>
+                Example: <b>13 September 2003</b>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+/* ===========================
+   Google Fonts
+=========================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ===========================
+   Reset
+=========================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #f8485e;
+    --secondary: #001e6c;
+    --white: #ffffff;
+    --gray: #808080;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    --font: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    overflow: hidden;
+    background: var(--primary);
+}
+
+/* ===========================
+   Canvas
+=========================== */
+
+.container-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* ===========================
+   Main Content
+=========================== */
+
+.container-content {
+    position: relative;
+    z-index: 10;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--white);
+    text-align: center;
+}
+
+.content {
+    width: 90%;
+    max-width: 900px;
+}
+
+/* ===========================
+   Headings
+=========================== */
+
+h1 {
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-weight: 400;
+}
+
+.subline {
+    margin-bottom: 4rem;
+}
+
+/* ===========================
+   Countdown
+=========================== */
+
+.countdown-list {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    flex-wrap: wrap;
+}
+
+.countdown-list li {
+    min-width: 120px;
+}
+
+.countdown-list span {
+    display: block;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.countdown-list small {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.happy__content {
+    display: none;
+}
+
+/* ===========================
+   Settings Button
+=========================== */
+
+.setting-icon {
+    position: fixed;
+
+    top: 30px;
+    right: 30px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.setting-icon:hover {
+    transform: rotate(90deg) scale(1.1);
+    background: rgba(255,255,255,.35);
+}
+
+.setting-icon i {
+    font-size: 2rem;
+}
+
+/* ===========================
+   Modal
+=========================== */
+
+.content-modalbox {
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(90%, 500px);
+
+    padding: 3rem;
+
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+
+    background: white;
+    color: #222;
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    z-index: 1000;
+}
+
+.headline__modalbox {
+    color: var(--secondary);
+    text-align: center;
+}
+
+.input-container__modalbox {
+    display: flex;
+    gap: 1rem;
+}
+
+.birthday__input {
+
+    flex: 1;
+
+    padding: 1.2rem;
+
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+    font-size: 1.6rem;
+    outline: none;
+}
+
+.birthday__input:focus {
+    border-color: var(--secondary);
+}
+
+.button {
+
+    border: none;
+
+    background: var(--secondary);
+
+    color: white;
+
+    padding: 1.2rem 2rem;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 1.5rem;
+
+    transition: .3s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    opacity: .95;
+}
+
+.alert-paragraph__modalbox {
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 1.5rem;
+
+    border-radius: 12px;
+
+    font-size: 1.4rem;
+
+    line-height: 1.7;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:768px) {
+
+    .countdown-list {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+
+    .countdown-list span {
+        font-size: 4rem;
+    }
+
+    .input-container__modalbox {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .setting-icon {
+        width: 50px;
+        height: 50px;
+        right: 20px;
+        top: 20px;
+    }
+}
+
+@media (max-width:480px) {
+
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .countdown-list span {
+        font-size: 3rem;
+    }
+
+    .countdown-list small {
+        font-size: 1.4rem;
+    }
+
+    .content-modalbox {
+        padding: 2rem;
+    }
+}
