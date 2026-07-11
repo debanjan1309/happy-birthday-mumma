@@ -42,7 +42,7 @@ let birthday = "";
 let distanceOfTime = 0;
 
 /* Default Birthday */
-setBirthday("17", "July");
+setBirthday("11", "July");
 
 /* ===========================
    Event Listeners
